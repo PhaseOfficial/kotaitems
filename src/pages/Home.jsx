@@ -1,35 +1,25 @@
-import HeroSection from '../components/HeroSection';
 import Navbar from '../components/Navbar';
-// import Explore from '../components/Exploreprod';
-import '../App.css';
-import Contactus from '../components/Contactus';
+import HeroSection from '../components/HeroSection';
+import VerificationSection from '../components/VerificationSection';
+import OverviewSection from '../components/OverviewSection';
+import CoreOperations from '../components/CoreOperations';
+import PillarsOfExcellence from '../components/PillarsOfExcellence';
+import ConsultationCTA from '../components/ConsultationCTA';
 import Footer from '../components/footer';
-// import Companies from '../components/companies';
-import Offer from '../components/Offer';
-import Trust from '../components/Trust';
-import PartnersSection from '../components/PartnersSection';
-// import Carreer from '../components/Carreer';
-import Testimonials from '../components/Testimonials';
 
 export default function Home() {
-    return (
-        <div>
-            <Navbar />
-            
-            <HeroSection className=""/>
-            <Offer className=""/>
-            {/* <Explore className=""/> */}
-            
-            <Trust className=""/>
-            <Testimonials className="mt-20"/>
-            {/* <Companies className=""/> */}
-            {/* <Carreer className=""/> */}
-            <PartnersSection />
-            <Contactus className="mt-20" id="contact"/>
-            <Footer className="mt-20"/>
-
-        </div>
-
-           
-    );
+  return (
+    <div className="bg-surface">
+      <Navbar />
+      <main>
+        <HeroSection />
+        <VerificationSection />
+        <OverviewSection />
+        <CoreOperations />
+        <PillarsOfExcellence />
+        <ConsultationCTA />
+      </main>
+      <Footer />
+    </div>
+  );
 }

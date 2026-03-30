@@ -7,13 +7,7 @@ import "./App.css";
 import ContactUs from "./pages/Contact";
 import Careers from "./pages/Careers";
 import TagManager from "react-gtm-module";
-import Supportedliving from "./pages/Supportedliving";
-import AIChatWidget from "./components/AIChatWidget";
 import CookieConsent from "./components/Cookies";
-import OurFacilities from "./pages/our-facilities";
-import Mordenslavery from "./pages/Mordenslavery";
-import ScotlandWidget from "./components/ScotlandWidget";
-import ScotlandBranchPage from "./pages/ScotlandBranchPage";
 import React, { useEffect, useState } from "react";
 import { trackVisit } from "./utils/trackVisit";
 import { setupAnalyticsListeners } from "./utils/analyticsListener";
@@ -58,7 +52,7 @@ const App = () => {
   const hideWidgets = location.pathname.startsWith("/admin");
 
   return (
-    <div className="p-4">
+    <div className="bg-surface min-h-screen">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
@@ -66,10 +60,6 @@ const App = () => {
         <Route path="/Comingsoon" element={<ComingSoon />} />
         <Route path="/Contact" element={<ContactUs />} />
         <Route path="/Careers" element={<Careers />} />
-        <Route path="/Supportedliving" element={<Supportedliving />} />
-        <Route path="/Our-Facilities" element={<OurFacilities />} />
-        <Route path="/Mordenslavery" element={<Mordenslavery />} />
-        <Route path="/scotland" element={<ScotlandBranchPage />} />
         <Route path="/blog" element={<ReaderBlog />} />
         <Route
           path="/admin"
@@ -82,7 +72,7 @@ const App = () => {
         <Route
           path="*"
           element={
-            <div className="text-center mt-20 text-2xl">
+            <div className="text-center mt-20 text-2xl font-headline text-primary">
               404 - Page Not Found
             </div>
           }
@@ -92,9 +82,7 @@ const App = () => {
       {/* ✅ Only show widgets when not on admin routes */}
       {!hideWidgets && (
         <>
-          <AIChatWidget />
           <CookieConsent />
-          <ScotlandWidget />
         </>
       )}
     </div>

@@ -1,43 +1,45 @@
-import React from 'react';
-import { IoLogoWhatsapp } from "react-icons/io";
-import { AiFillInstagram } from "react-icons/ai";
-import { FaFacebook } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-gray-300 py-6 relative">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          {/* Footer Links */}
-          <div className="mb-4 md:mb-0">
-            <a href="" className="text-gray-300 hover:text-white px-2">Home</a>
-            <a href="" className="text-gray-300 hover:text-white px-2">About</a>
-            <a href="" className="text-gray-300 hover:text-white px-2">Services</a>
-            <a href="" className="text-gray-300 hover:text-white px-2">Contact</a>
+    <footer className="bg-[#edeeef] dark:bg-[#191c1d] w-full mt-20">
+      <div className="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full max-w-7xl mx-auto">
+        <div className="flex flex-col gap-4">
+          <span className="font-space font-bold text-primary dark:text-white text-xl uppercase tracking-tighter">
+            Kota Items
+          </span>
+          <p className="font-headline text-sm text-[#191c1d]/60 max-w-xs">
+            Industrial Precision in every batch. Setting the Zimbabwe national standard for F&B excellence.
+          </p>
+          <div className="flex items-center gap-2 text-[10px] font-bold text-primary/40 uppercase tracking-[0.2em]">
+            <span className="material-symbols-outlined text-sm">verified</span>
+            PRAZ REGISTERED ENTITY
           </div>
-
-          {/* Social Media Icons */}
-          <div className="flex space-x-4 mb-4 md:mb-0">
-            <a href="https://wa.me/4407828402043" className="hover:text-white">
-            <IoLogoWhatsapp className="w-6 h-6"/>
-
-            </a>
-            <a href="https://www.instagram.com/vybrantcareservices/#" className="hover:text-white">
-            <AiFillInstagram className="w-6 h-6"/>
-            </a>
-            <a href="https://www.facebook.com/vybrantcareservices" className="hover:text-white">
-            <FaFacebook className="w-6 h-6"/>
-            </a>
-            <a href="https://www.linkedin.com/in/vybrantcareservices" className="hover:text-white">
-            <FaLinkedin className="w-6 h-6"/>
-            </a>
-          </div>
-
-          {/* Copyright */}
-          <div>
-            <p className="text-sm">&copy; 2025 Vybrant Care Services. All rights reserved.</p>
-          </div>
+        </div>
+        
+        <div className="flex flex-wrap gap-8 my-8 md:my-0">
+          <Link
+            to="/privacy"
+            className="font-headline text-sm text-[#191c1d]/60 hover:text-[#7f5700] underline transition-all duration-200"
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            to="/terms"
+            className="font-headline text-sm text-[#191c1d]/60 hover:text-[#7f5700] underline transition-all duration-200"
+          >
+            Terms of Service
+          </Link>
+          <Link
+            to="/specs"
+            className="font-headline text-sm text-[#191c1d]/60 hover:text-[#7f5700] underline transition-all duration-200"
+          >
+            Manufacturing Specs
+          </Link>
+        </div>
+        
+        <div className="text-primary dark:text-white font-headline text-sm font-bold">
+          © 2026 Kota Items. Industrial Precision.
         </div>
       </div>
     </footer>

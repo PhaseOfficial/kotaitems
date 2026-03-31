@@ -1,3 +1,5 @@
+import Partnershippic from '../assets/partnership.png';
+
 const OverviewSection = () => {
   return (
     <section className="bg-surface-container-low py-32 overflow-hidden">
@@ -8,7 +10,7 @@ const OverviewSection = () => {
             <img
               alt="Aerial view of a large-scale manufacturing plant"
               className="w-full h-auto"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw4n4TzxM45_wWg_vI_AzF3V_YsPlUZFejUtQ89MkepgkUlcCMqbVjcMXh3Ipk4D9UnQ8_AjYEwEg1f82mDLELnaOnFnJ_enYL97PwFCmjLV794q9kjYtz6EnCnJU2lvQ_A8FeMXvuWcOhG0UhBA6BtDwcultJsSmneAcNAjWs_jkHVEsY68sKuyuaNKgoYK5GQ_Aji6KlT4k4YZsTaDwXcGpORt9xDVNmBlRHQzA8qC1BNFfCv_nGEbbodZKeyoGWxbc3AcAE5B0"
+              src={Partnershippic}
             />
           </div>
         </div>

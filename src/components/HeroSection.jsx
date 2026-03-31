@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import logoUrl from "../assets/weblogo.png";
+import BackgroundImage from "../assets/factory.png";
 
 const HeroSection = () => {
   return (
@@ -7,7 +9,7 @@ const HeroSection = () => {
         <img
           alt="Modern high-tech industrial manufacturing facility"
           className="w-full h-full object-cover"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlpFZXXLvfWKAVTI366D0UKhdwT7v3HVhEH3zAOFHE7XCY94vYMj-pidhgriRd-u6uzb_AjEir6cTBWYManANQBRMklUrmZOPA8UZA86a2GWTb-cG5j8lCHeaf97GeY4dATrcuE_hcCgT2OgD38Gr3AXcpBVrqH64M78VQ85-2rUiyM6DgU-3WjJuYp8HbReGfetxVl9mnB77osNNKCkW0SKdtnyI1UHnyA9_Qf-vAOQ5Ks6VrFD9o4cCwLhnvysl8oMdjSOdlDeM"
+          src={BackgroundImage}
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
@@ -31,12 +33,12 @@ const HeroSection = () => {
         </p>
         
         <div className="flex flex-wrap gap-4 mb-16">
-          <button className="bg-secondary-container text-on-secondary-container px-8 py-4 font-bold rounded-md hover:bg-secondary transition-colors uppercase tracking-wider font-space">
+          <Link to="/Services" className="bg-secondary-container text-on-secondary-container px-8 py-4 font-bold rounded-md hover:bg-secondary transition-colors uppercase tracking-wider font-space">
             Explore Portfolio
-          </button>
-          <button className="border border-white/20 backdrop-blur-md text-white px-8 py-4 font-bold rounded-md hover:bg-white/10 transition-colors uppercase tracking-wider font-space">
+          </Link>
+          <Link to="/About" className="border border-white/20 backdrop-blur-md text-white px-8 py-4 font-bold rounded-md hover:bg-white/10 transition-colors uppercase tracking-wider font-space">
             Our Capabilities
-          </button>
+          </Link>
         </div>
 
         {/* Trust Badges Overlay */}

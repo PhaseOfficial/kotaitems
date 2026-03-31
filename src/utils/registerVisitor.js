@@ -1,4 +1,4 @@
-import { supabase } from "../lib/supabaseClient";
+
 import { getVisitorId } from "./visitor";
 
 // Register the current visitor in the `visitors` table.

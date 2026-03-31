@@ -1,9 +1,11 @@
+import Packaging from "../../assets/packaging.png";
+import Sugarbeans from "../../assets/sugarbeans.png";
 const FoodManufacturing = () => {
   const products = [
     {
-      title: "Essential Grains",
-      description: "Precision-sorted and processed staples for large-scale distribution networks.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDXjnhmtWVNox8dCQewh0wTrB_HEEB2z6ApDdchunSKAERzCOiTQKJ-9QQGK81ivgoys6bofNgACmNSGlZMn36CTXVcSxriPFWNCE9m021Ok1oM1imtBPPUqFvjWzByqUxRK7QOokTBHsHzHshtVop3Dd4DKSWBzWwoIbkHZyIVKhLcxuAAtT3IWYk3MpIV4RUX9FmkE1LVWJ0VIPysM9-z4Y8pq2Vq_g4K2Gn4M58bvr3iMmx-fJ4wTNxVfmsA9KaP85q5nKG-pmY",
+      title: "Peanut Butter Manufacturing",
+      description: "High-quality peanut butter produced in compliance with strict safety and quality standards.",
+      image: Packaging,
       tags: ["Bulk Supply", "Certified"]
     },
     {
@@ -15,7 +17,7 @@ const FoodManufacturing = () => {
     {
       title: "Prepared Goods",
       description: "High-volume prepared food solutions for the retail and hospitality sectors.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCpQctGZkha7wskPBC-ZtBIRUSqn11NxBA5w09tyrKzzxey_vsAb9y9VpOF1Bmsudb42RYb5ZFv17w9v5APxy0afSdAUOksg_0TQIJ6GUj5R7bPsFSJn7rAiaOzkEyiPXttolGwbci1SGoBD-esSEOMfz47dv8UmxOxoA95qW8-3IMn6iIO22L6TZWlNpG_VGYen9gRjtLgjUw2qMYw_J60PnYzsDFif_9xxf2PpTu0J0hnzomv-N-Uo_qQ9E0bGAExDqOmLvXwLUM",
+      image: Sugarbeans,
       tags: ["Ready-to-use"]
     }
   ];

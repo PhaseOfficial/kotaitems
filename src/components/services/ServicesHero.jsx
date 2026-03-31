@@ -1,3 +1,4 @@
+import Buttermill from '../../assets/buttermill.png';
 const ServicesHero = () => {
   return (
     <section className="max-w-7xl mx-auto px-8 mb-24 pt-32">
@@ -17,7 +18,7 @@ const ServicesHero = () => {
           <div className="w-full aspect-square bg-surface-container relative overflow-hidden">
             <img 
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGQ4_NAfXBH79-kwBL4F6UuoXER7Cz5cC-UrFEmyziiQmSX9eCxtPZbj4Hg4L7qSYUR_zU7lfzrNkjE_xNvdg5q7E-Q1JnQu1VFhqE-Rn7KRf-E-PKWpEY_C35SMXwqwgYC9UhA9UOJO6qgOvJOgevZzGJMWkVj1qeb8a7M4XzIOMPQ4HalAFM-oqVw88-n0AA1u0cnBuwiZcgxTskxAJIJrsg2MfPTl9I3qDmiLCIwlXQA-1BEuPLn-ygevaFSNomzP8BCMwpB5E"
+              src={Buttermill}
               alt="Industrial precision"
             />
             <div className="absolute bottom-6 right-6 bg-white p-4 shadow-xl">

@@ -8,10 +8,10 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-white w-full mt-20">
-      <div className="max-w-7xl mx-auto px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-white/10 pb-12">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 mb-12 border-b border-white/10 pb-12">
           {/* Column 1: Brand & Logo */}
-          <div className="space-y-6">
+          <div className="space-y-6 flex flex-col items-center sm:items-start text-center sm:text-left">
             <Link to="/" className="flex items-center gap-2 group">
               <img
                 src={logoUrl}
@@ -32,18 +32,15 @@ const Footer = () => {
           </div>
 
           {/* Column 2: Navigation */}
-          <div className="space-y-6">
+          <div className="space-y-6 flex flex-col items-center sm:items-start text-center sm:text-left">
             <h4 className="text-lg font-bold font-headline uppercase tracking-tight text-secondary-container">
-              Navigation
+              Quick Links
             </h4>
             <nav className="flex flex-col gap-3">
               {[
                 { name: 'Home', path: '/' },
                 { name: 'About Us', path: '/About' },
-                { name: 'Services', path: '/Services' },
-                { name: 'Contact', path: '/Contact' },
-                { name: 'Careers', path: '/Careers' },
-                { name: 'Blog', path: '/blog' }
+                { name: 'Services', path: '/Services' }
               ].map((link) => (
                 <Link
                   key={link.path}
@@ -56,35 +53,12 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Column 3: Legal & Resources */}
-          <div className="space-y-6">
-            <h4 className="text-lg font-bold font-headline uppercase tracking-tight text-secondary-container">
-              Resources
-            </h4>
-            <nav className="flex flex-col gap-3">
-              {[
-                { name: 'Privacy Policy', path: '/privacy' },
-                { name: 'Terms of Service', path: '/terms' },
-                { name: 'Manufacturing Specs', path: '/specs' },
-                { name: 'Support', path: '/Comingsoon' }
-              ].map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  className="text-on-primary/70 hover:text-secondary-container transition-colors font-body text-sm"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
-          </div>
-
-          {/* Column 4: Contact & Socials */}
-          <div className="space-y-6">
+          {/* Column 3: Contact & Socials */}
+          <div className="space-y-6 flex flex-col items-center sm:items-start text-center sm:text-left col-span-1 sm:col-span-2 lg:col-span-1">
             <h4 className="text-lg font-bold font-headline uppercase tracking-tight text-secondary-container">
               Get in Touch
             </h4>
-            <div className="space-y-4">
+            <div className="space-y-4 w-full flex flex-col items-center sm:items-start">
               <div className="flex items-start gap-3">
                 <FaLocationDot className="text-secondary-container text-lg mt-1 shrink-0" />
                 <p className="text-on-primary/70 text-sm font-body">
@@ -95,7 +69,7 @@ const Footer = () => {
               </div>
               <div className="flex items-start gap-3">
                 <FaPhone className="text-secondary-container shrink-0 mt-1" />
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-1 items-center sm:items-start">
                   <p className="text-on-primary/70 text-sm font-body">+263 775 632 466</p>
                   <p className="text-on-primary/70 text-sm font-body">+263 775 401 539</p>
                   <p className="text-on-primary/70 text-sm font-body">+263 778 071 210</p>
@@ -128,13 +102,21 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 text-on-primary/40 text-xs font-body border-t border-white/5">
-          <div>
-            © {currentYear} Kota Items (Pvt) Ltd. All Rights Reserved.
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-6 pt-8 text-on-primary/40 text-[10px] md:text-xs font-body border-t border-white/5 text-center lg:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-8">
+            <span>© {currentYear} Kota Items (Pvt) Ltd. All Rights Reserved.</span>
+            <a 
+              href="https://www.redcupseries.co.zw" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-secondary-container transition-colors"
+            >
+              Website by Red Cup Series
+            </a>
           </div>
-          <div className="flex items-center gap-6 uppercase tracking-widest font-space">
+          <div className="flex items-center gap-4 md:gap-6 uppercase tracking-[0.2em] font-space text-[9px] md:text-[11px]">
             <span>Industrial Excellence</span>
-            <span>•</span>
+            <span className="opacity-20">•</span>
             <span>Global Standards</span>
           </div>
         </div>

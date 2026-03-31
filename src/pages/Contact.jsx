@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Contactus from '../components/Contactus';
 import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
-import ContactForm from "../components/ContactForm";
 
 const ContactUs = () => {
   return (
@@ -25,8 +24,6 @@ const ContactUs = () => {
             </p>
           </div>
          
-          <ContactForm />
-          
         </motion.div>
         <Contactus id="contact" />
       </div>

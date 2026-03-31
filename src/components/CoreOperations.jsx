@@ -1,8 +1,10 @@
-import Butterimage from "../assets/buttermill.png"
-import PartnershipImage from "../assets/partnership.png"
-import FactoryImage from "../assets/factory.png"
-import MissionImage from "../assets/mission.png"
-import Packaging from "../assets/packaging.png"
+import Butterimage from "../assets/buttermill.png";
+import PartnershipImage from "../assets/partnership.png";
+import FactoryImage from "../assets/factory.png";
+import Packaging from "../assets/packaging.png";
+import Super from "../assets/super.jpg";
+import Community from "../assets/community.avif";
+import { motion } from "framer-motion";
 
 const CoreOperations = () => {
   const operations = [
@@ -11,44 +13,62 @@ const CoreOperations = () => {
       title: "Food Manufacturing",
       description: "Precision-engineered culinary products focusing on taste, nutritional value, and mass-market consistency.",
       image: Butterimage,
-      isPrimary: false
+      isPrimary: false,
     },
     {
       id: "02",
       title: "Quality Packaging Solutions",
       description: "Industrial-grade packaging designed for protection, shelf-appeal, and sustainable lifecycle management.",
       image: Packaging,
-      isPrimary: true
+      isPrimary: true,
     },
     {
       id: "03",
       title: "Premium Beverage Distribution",
       description: "Nationwide cold-chain logistics ensuring peak freshness for the finest beverage brands across Zimbabwe.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBiWR3-bFacFlI9S3IYVi2DFCl5Nu6TvMldOQinio-FODzZif2OgPyRngag4m83ATrYDQy5JA2V1Z1uGJewnwN5193CNb23hUK2lu-R6WHoyIJTLY0N4QGuKPmiK03E3SfkwXw4WN936XOffBodU3YdCKpRuLkbtSN2H8uFokko_O3Rt-3pZubF_yeI3sVcZ-Zt3MiYZHA9RCYbHKkyJkfw3koDuQJQ6WO0LUY7zs9cSfzjnGaqRC_09gbEqUB8boIhSOGKOCFaoCg",
-      isPrimary: false
+      image: Super,
+      isPrimary: false,
     },
     {
       id: "04",
       title: "Entrepreneurship Support",
       description: "Empowering the next generation through funding, mentorship, and full-scale production and distribution for aspiring entrepreneurs.",
       image: PartnershipImage,
-      isPrimary: false
+      isPrimary: false,
     },
     {
       id: "05",
       title: "Community Uplift",
       description: "Investing in community projects through financial support and hands-on assistance to foster local development.",
-      image: MissionImage,
-      isPrimary: false
+      image: Community,
+      isPrimary: false,
     },
     {
       id: "06",
       title: "Industrial Tech Innovation",
       description: "Pioneering the future of manufacturing with advanced industrial technology supply and technical innovation.",
       image: FactoryImage,
-      isPrimary: false
-    }
+      isPrimary: false,
+    },
   ];
+
+  const containerVariants = {
+    offscreen: {},
+    onscreen: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const cardVariants = {
+    offscreen: { y: 50, opacity: 0 },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", bounce: 0.4, duration: 0.8 },
+    },
+  };
 
   return (
     <section className="py-32 bg-surface">
@@ -61,17 +81,24 @@ const CoreOperations = () => {
           <p className="text-on-surface-variant font-medium tracking-wide uppercase text-sm font-space">Scalable Solutions. Superior Quality.</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={containerVariants}
+        >
           {operations.map((op) => (
-            <div
+            <motion.div
               key={op.id}
               className={`group relative overflow-hidden h-[500px] flex flex-col justify-end p-8 transition-all ${
                 op.isPrimary 
                   ? "bg-primary md:h-[550px] md:-mt-8 shadow-xl" 
                   : op.id === "05"
                     ? "bg-primary shadow-lg"
-                    : "bg-surface-container-lowest hover:bg-primary-fixed"
+                    : "bg-surface-container-lowest"
               }`}
+              variants={cardVariants}
             >
               <div className="absolute inset-0">
                 <img
@@ -83,11 +110,20 @@ const CoreOperations = () => {
                   }`}
                   src={op.image}
                 />
-                {/* Navy Blue (Primary) gradient overlay to maintain tint on the lower half */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                {/* Gradient overlay to maintain the specific card's theme color on the lower half */}
+                <div className={`absolute inset-0 bg-gradient-to-t opacity-0 group-hover:opacity-100 transition-opacity duration-700 ${
+                  op.isPrimary || op.id === "05"
+                    ? "from-primary via-primary/40 to-transparent"
+                    : "from-white via-white/60 to-transparent"
+                }`} />
               </div>
               <div className={`relative z-10 ${op.isPrimary || op.id === "05" ? "text-white" : ""}`}>
-                <span className={`text-secondary font-black text-5xl mb-6 block font-space ${op.isPrimary || op.id === "05" ? "" : "opacity-20"}`}>
+                <span 
+                  className={`text-secondary font-black text-6xl mb-6 block font-space transition-opacity duration-500 ${
+                    op.isPrimary || op.id === "05" ? "opacity-100" : "opacity-40 group-hover:opacity-100"
+                  }`}
+                  style={{ textShadow: op.isPrimary || op.id === "05" ? "none" : "1px 1px 0px rgba(0,0,0,0.05)" }}
+                >
                   {op.id}
                 </span>
                 <h3 className="text-2xl font-bold mb-4 font-headline">{op.title}</h3>
@@ -95,9 +131,9 @@ const CoreOperations = () => {
                   {op.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

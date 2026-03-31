@@ -1,3 +1,4 @@
+import Precision from "../assets/precision.png"
 const PillarsOfExcellence = () => {
   const pillars = [
     {
@@ -51,7 +52,7 @@ const PillarsOfExcellence = () => {
             <img
               alt="Data visualization of manufacturing efficiency"
               className="w-full h-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQyncyQ-sJ6S4RSgWaUdAeMypsLkEMmpaosbNOkT5oLayPnX24PZbqOZYHh4vkJ4el0JiNij0vXy-6msU_5m7eFKsFp62_cEcuag9AoiFFqD_bdmoVEn7kxJUHQTEjPs5HdyVu1Tv5hTuCHOezijrEscQp9yrOgj9CSqF2WCro0Sp0dgwc78K1TReq5As6ofmWmcCSinS9CHwkK6KkvtD_7RQWhopqvRcSOZPkX0KmoVWKLtPVgCVo0p68iOtf5REPF7JICiw3xnY"
+              src={Precision}
             />
             <div className="absolute -bottom-8 -left-8 bg-white p-12 text-primary hidden md:block max-w-xs shadow-2xl">
               <p className="text-4xl font-black mb-2 font-space">99.8%</p>

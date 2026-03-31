@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { supabase } from "../lib/supabaseClient";
+
 
 const ContactForm = () => {
   const [name, setName] = useState("");

@@ -1,4 +1,4 @@
-import { supabase } from "../lib/supabaseClient";
+
 
 export const trackEvent = async (event_type, event_target) => {
   try {

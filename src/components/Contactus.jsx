@@ -10,19 +10,15 @@ const Contactus = () => {
           {/* Main Headquarters */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-primary font-headline uppercase tracking-tight">
-              Zimbabwe Headquarters
+              Headquarters
             </h3>
             <div className="flex items-start gap-4">
               <IoMdPin className="text-secondary text-2xl shrink-0 mt-1" />
               <p className="text-on-surface-variant font-body">
-                Harare Industrial Park East,<br />
-                Manufacturing Block 12,<br />
-                Harare, Zimbabwe
+                228 Coventry Rd,<br />
+                Industrial Site,<br />
+                Marondera, Zimbabwe
               </p>
-            </div>
-            <div className="flex items-center gap-4">
-              <FaPhone className="text-secondary text-xl shrink-0" />
-              <p className="text-on-surface-variant font-body">+263 242 123 456</p>
             </div>
             <div className="flex items-center gap-4">
               <MdEmail className="text-secondary text-xl shrink-0" />
@@ -30,36 +26,33 @@ const Contactus = () => {
             </div>
           </div>
 
-          {/* Logistics & Distribution */}
+          {/* Contact Numbers */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-primary font-headline uppercase tracking-tight">
-              Logistics Hub
+              Direct Contact
             </h3>
             <div className="flex items-start gap-4">
-              <IoMdPin className="text-secondary text-2xl shrink-0 mt-1" />
-              <p className="text-on-surface-variant font-body">
-                Bulawayo Distribution Centre,<br />
-                Unit 4, Khami Road,<br />
-                Bulawayo
-              </p>
-            </div>
-            <div className="flex items-center gap-4">
-              <FaPhone className="text-secondary text-xl shrink-0" />
-              <p className="text-on-surface-variant font-body">+263 292 789 012</p>
+              <FaPhone className="text-secondary text-xl shrink-0 mt-1" />
+              <div className="space-y-1">
+                <p className="text-on-surface-variant font-body">+263 775 632 466</p>
+                <p className="text-on-surface-variant font-body">+263 775 401 539</p>
+                <p className="text-on-surface-variant font-body">+263 778 071 210</p>
+              </div>
             </div>
           </div>
 
           {/* Production Inquiry */}
           <div className="space-y-6 bg-primary-container p-8 text-white">
             <h3 className="text-xl font-bold text-secondary-container font-headline uppercase tracking-tight">
-              Production Inquiries
+              Operational Hours
             </h3>
             <p className="text-sm text-blue-100/70 font-body">
-              For large-scale contract manufacturing or beverage redistribution logistics, please contact our senior engineering team directly.
+              Our facilities operate 24/7 for production, but our administrative offices are open during standard business hours.
             </p>
             <div className="pt-4">
-              <p className="text-xs font-bold uppercase tracking-widest text-secondary-container font-space">Direct Line</p>
-              <p className="text-lg font-bold font-space">+263 772 000 000</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-secondary-container font-space">Admin Hours</p>
+              <p className="text-lg font-bold font-space">Mon - Fri: 8 AM - 5 PM</p>
+              <p className="text-lg font-bold font-space">Sat: 8 AM - 1 PM</p>
             </div>
           </div>
         </div>

@@ -41,7 +41,7 @@ const Contactus = () => {
             </div>
           </div>
 
-          {/* Production Inquiry */}
+          {/* Operational Hours */}
           <div className="space-y-6 bg-primary-container p-8 text-white">
             <h3 className="text-xl font-bold text-secondary-container font-headline uppercase tracking-tight">
               Operational Hours

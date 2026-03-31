@@ -23,13 +23,18 @@ const FoodManufacturing = () => {
   ];
 
   return (
-    <section className="bg-surface-container-low py-24 mb-24">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="flex justify-between items-baseline mb-16">
-          <h2 className="font-headline text-4xl font-bold text-primary tracking-tight uppercase">Food Manufacturing</h2>
-          <div className="h-[2px] flex-grow mx-8 bg-outline-variant/30"></div>
-          <a className="font-label text-sm font-bold text-secondary uppercase tracking-widest hover:translate-x-1 transition-transform inline-flex items-center font-space" href="#">
-            View Catalogue <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+    <section className="bg-surface-container-low py-16 md:py-24 mb-16 md:mb-24">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-baseline gap-4 mb-12 md:mb-16">
+          <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary tracking-tight uppercase">Food Manufacturing</h2>
+          <div className="hidden md:block h-[2px] flex-grow mx-8 bg-outline-variant/30"></div>
+          <a 
+            href="https://wa.me/263775632466?text=Hi%20Kota%20Items,%20I'd%20like%20to%20request%20the%20specifications%20for%20your%20Food%20Manufacturing%20services."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-label text-xs md:text-sm font-bold text-secondary uppercase tracking-widest hover:translate-x-1 transition-transform inline-flex items-center font-space"
+          >
+            Request Specification <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
           </a>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">

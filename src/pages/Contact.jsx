@@ -25,7 +25,7 @@ const ContactUs = () => {
           </div>
          
         </motion.div>
-        <Contactus id="contact" />
+        <Contactus />
       </div>
       <Footer />
     </div>

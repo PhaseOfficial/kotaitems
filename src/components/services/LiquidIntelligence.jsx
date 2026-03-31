@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Super from "../../assets/super.jpg";
 import African from "../../assets/african dist.jpg";
 
@@ -65,11 +64,16 @@ const LiquidIntelligence = () => {
               <h4 className="font-headline text-2xl font-bold mb-2 uppercase">Nationwide Logistics</h4>
               <p className="text-xs text-slate-400 font-body">Our state-of-the-art, cold-chain logistics network ensures product integrity and timely delivery for all partners.</p>
             </div>
-            <div className="w-1/2 flex justify-end">
-              <Link to="/Contact" className="bg-secondary-container text-on-secondary-container px-6 py-2 font-bold text-xs uppercase tracking-widest font-space">
-                Partner With Us
-              </Link>
-            </div>
+          <div className="w-1/2 flex justify-end">
+            <a 
+              href="https://wa.me/263775632466?text=Hi%20Kota%20Items,%20I'd%20like%20to%20request%20the%20specifications%20for%20your%20Beverage%20Redistribution%20network."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-secondary-container text-on-secondary-container px-6 py-2 font-bold text-xs uppercase tracking-widest font-space text-center"
+            >
+              Request Specification
+            </a>
+          </div>
           </div>
         </div>
       </div>

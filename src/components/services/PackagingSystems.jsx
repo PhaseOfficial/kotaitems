@@ -12,9 +12,15 @@ const PackagingSystems = () => {
           <p className="text-on-surface-variant mb-12 font-body">
             Beyond the container. We design ecological and structural integrity into every unit of packaging we produce.
           </p>
-          <button className="w-full py-4 border border-primary font-headline font-bold uppercase text-primary hover:bg-primary hover:text-white transition-all tracking-widest text-sm font-space">
+          <a 
+            href="https://wa.me/263775632466?text=Hi%20Kota%20Items,%20I'd%20like%20to%20request%20the%20specifications%20for%20your%20Packaging%20Systems."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full py-4 border border-primary font-headline font-bold uppercase text-primary hover:bg-primary hover:text-white transition-all tracking-widest text-sm font-space inline-flex items-center justify-center"
+          >
             Request Specification
-          </button>
+          </a>
+
         </div>
         <div className="col-span-12 lg:col-span-8 space-y-24">
           <div className="relative group">

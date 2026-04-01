@@ -32,7 +32,7 @@ const LogoCloud = () => {
 
   return (
     <div className="bg-surface-container-low py-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
         <h3 className="text-center text-on-surface-variant font-semibold mb-12 font-space uppercase tracking-widest text-sm">
           In Partnership With Industry Leaders
         </h3>

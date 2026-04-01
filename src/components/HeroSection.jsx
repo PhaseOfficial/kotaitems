@@ -14,7 +14,7 @@ const HeroSection = () => {
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
       
-      <div className="relative w-full max-w-7xl mx-auto px-8 py-24 flex flex-col items-start">
+      <div className="relative w-full max-w-7xl mx-auto px-6 md:px-8 py-24 flex flex-col items-start">
         <div className="flex items-center gap-4 mb-12">
           <img
             alt="Kota Items Logo"

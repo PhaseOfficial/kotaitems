@@ -3,7 +3,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 const ConsultationCTA = () => {
   return (
     <section className="py-24 bg-white overflow-hidden relative border-b border-outline-variant/30">
-      <div className="max-w-5xl mx-auto px-8 text-center relative z-10">
+      <div className="max-w-5xl mx-auto px-6 md:px-8 text-center relative z-10">
         <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-8 tracking-tight uppercase font-headline">
           Ready to Scale Your Production?
         </h2>

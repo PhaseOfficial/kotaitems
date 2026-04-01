@@ -9,7 +9,7 @@ const AboutHero = () => {
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
-      <div className="relative max-w-7xl mx-auto px-8 w-full py-24">
+      <div className="relative max-w-7xl mx-auto px-6 md:px-8 w-full py-24">
         <div className="max-w-3xl">
           <span className="inline-block px-3 py-1 bg-secondary text-on-secondary text-[10px] font-bold tracking-[0.2em] uppercase mb-6 font-space">
             Established 2021 | Zimbabwe

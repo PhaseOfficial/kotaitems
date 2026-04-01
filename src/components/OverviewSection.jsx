@@ -32,7 +32,7 @@ const OverviewSection = () => {
   return (
     <section className="bg-surface-container-low py-32 overflow-hidden">
       <motion.div
-        className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center"
+        className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center"
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.3 }}

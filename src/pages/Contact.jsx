@@ -8,9 +8,9 @@ const ContactUs = () => {
   return (
     <div className="bg-surface">
       <Navbar />
-      <div className="pt-32 pb-16 w-full">
+      <div className="pt-24 pb-12 px-6 md:px-8 w-full">
         <motion.div
-          className="text-center w-full max-w-4xl mx-auto px-8"
+          className="text-center w-full max-w-4xl mx-auto px-6 md:px-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -19,7 +19,7 @@ const ContactUs = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-primary font-headline uppercase tracking-tighter mb-4">
               Get in Touch
             </h1>
-            <p className="text-xl text-on-surface-variant font-body max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-on-surface-variant font-body max-w-2xl mx-auto">
               Ready to scale your industrial production? Our engineering and logistics teams are standing by.
             </p>
           </div>

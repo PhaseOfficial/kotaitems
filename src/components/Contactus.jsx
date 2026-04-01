@@ -4,12 +4,12 @@ import { MdEmail } from "react-icons/md";
 
 const Contactus = () => {
   return (
-    <div className="bg-surface py-24 px-8" id="contact">
+    <div className="bg-surface py-16 px-6 md:px-8" id="contact">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 text-left">
           {/* Main Headquarters */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-primary font-headline uppercase tracking-tight">
+            <h3 className="text-xl sm:text-2xl font-bold text-primary font-headline uppercase tracking-tight">
               Headquarters
             </h3>
             <div className="flex items-start gap-4">
@@ -28,7 +28,7 @@ const Contactus = () => {
 
           {/* Contact Numbers */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-primary font-headline uppercase tracking-tight">
+            <h3 className="text-xl sm:text-2xl font-bold text-primary font-headline uppercase tracking-tight">
               Direct Contact
             </h3>
             <div className="flex items-start gap-4">
@@ -43,7 +43,7 @@ const Contactus = () => {
 
           {/* Operational Hours */}
           <div className="space-y-6 bg-primary-container p-8 text-white">
-            <h3 className="text-xl font-bold text-secondary-container font-headline uppercase tracking-tight">
+            <h3 className="text-lg sm:text-xl font-bold text-secondary-container font-headline uppercase tracking-tight">
               Operational Hours
             </h3>
             <p className="text-sm text-blue-100/70 font-body">

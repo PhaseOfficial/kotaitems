@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <header className="bg-white fixed top-0 w-full z-50 border-b border-black/5">
-      <div className="flex justify-between items-center px-8 py-4 max-w-none mx-auto">
+      <div className="flex justify-between items-center px-6 md:px-8 py-4 max-w-none mx-auto">
         <div className="flex items-center gap-8">
           <Link to="/" className="flex items-center gap-2">
             <img

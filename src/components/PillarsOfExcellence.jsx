@@ -25,7 +25,7 @@ const PillarsOfExcellence = () => {
 
   return (
     <section className="bg-primary-container py-32 text-white">
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           <div>
             <h2 className="text-4xl font-bold mb-8 text-on-primary-container uppercase tracking-tight font-headline">

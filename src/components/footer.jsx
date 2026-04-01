@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-white w-full mt-20">
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 mb-12 border-b border-white/10 pb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-12 border-b border-white/10 pb-12">
           {/* Column 1: Brand & Logo */}
           <div className="space-y-6 flex flex-col items-center sm:items-start text-center sm:text-left">
             <Link to="/" className="flex items-center gap-2 group">

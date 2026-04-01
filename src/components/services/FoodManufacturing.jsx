@@ -40,7 +40,7 @@ const FoodManufacturing = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
           {products.map((product, index) => (
             <div key={index} className="group">
-              <div className="bg-surface-container-lowest overflow-hidden mb-6 aspect-[4/5] relative">
+              <div className="bg-surface-container-lowest overflow-hidden mb-6 aspect-[16/9] md:aspect-[4/5] relative">
                 <img 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                   src={product.image}

@@ -8,9 +8,9 @@ import Footer from '../components/footer';
 
 const Services = () => {
   return (
-    <div className="bg-surface">
-      <Navbar />
-      <main>
+       <div className="bg-surface">
+         <Navbar />
+         <main className="pt-16">
         <ServicesHero />
         <FoodManufacturing />
         <PackagingSystems />

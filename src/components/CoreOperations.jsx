@@ -72,7 +72,7 @@ const CoreOperations = () => {
 
   return (
     <section className="py-32 bg-surface">
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <h2 className="text-4xl font-extrabold text-primary mb-4 tracking-tight uppercase font-headline">Core Operations</h2>

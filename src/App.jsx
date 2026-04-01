@@ -22,10 +22,11 @@ const App = () => {
   const location = useLocation();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     trackVisit();
     registerVisitor();
     setupAnalyticsListeners();
-  }, []);
+  }, [location.pathname]);
 
   return (
     <div className="bg-surface min-h-screen">

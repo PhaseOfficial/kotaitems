@@ -1,3 +1,4 @@
+import Giving from '../../assets/giving.png';
 const SustainabilitySection = () => {
   return (
     <section className="bg-primary text-white py-16 md:py-24 md:py-32 overflow-hidden">
@@ -36,7 +37,7 @@ const SustainabilitySection = () => {
               <div className="absolute -inset-4 border border-blue-500/20 translate-x-2 translate-y-2 md:translate-x-4 md:translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500"></div>
               <img 
                 className="relative z-10 w-full aspect-square object-cover rounded-sm" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzNHLwjQgyVvSZ08SKZ2tjn8zWwyjWvAbjud00gqWAnNMdiGnZzsfOOr5Qi2A2gTsDBQ8HNpqMLMH1_z8cw0g87sjeDGQzKbGQQ2nteE1qPP3bBmnwboiC8Segnc0rNvm82oUpEfCbdPa9ohw2wA27xmg0dtHRjumocGyubwpADdFucgyEhSzkOjJ_bu9gmw_K7T4gDomTDamzyWdN-VvFkZVo-3ALG82V588HIGSpRJTrTQlkqRJ14PS8bDjqm4IvmurpziBfkCo"
+                src={Giving}
                 alt="Our community and sustainability efforts"
               />
             </div>

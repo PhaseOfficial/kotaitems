@@ -21,7 +21,10 @@ const HeroSection = () => {
             className="h-20 brightness-0 invert opacity-90"
             src={logoUrl}
           />
-          <span className="text-4xl font-bold tracking-tighter text-white font-space uppercase">Kota Items</span>
+          <div className="flex flex-col">
+            <span className="text-4xl font-bold tracking-tighter text-white font-space uppercase leading-none">Kota Items</span>
+            <span className="text-secondary text-xs font-bold tracking-[0.3em] uppercase mt-2 font-space">Innovation • Growth • Value</span>
+          </div>
         </div>
         
         <h1 className="text-5xl md:text-7xl font-extrabold text-white max-w-4xl tracking-tight leading-[1.1] mb-8 font-headline">

@@ -1,81 +1,82 @@
 import Super from "../../assets/super.jpg";
 import African from "../../assets/african dist.jpg";
 import Delta from "../../assets/DELTA.webp";
+import { motion } from "framer-motion";
 
 const LiquidIntelligence = () => {
+  const partners = [
+    {
+      title: "Delta Beverages Portfolio",
+      description: "Official distributors for Delta's complete range of iconic alcoholic and non-alcoholic brands across the region.",
+      image: Delta,
+      accent: "bg-primary"
+    },
+    {
+      title: "African Distillers",
+      description: "Premium spirits and wines distribution, maintaining cold-chain integrity from warehouse to point-of-sale.",
+      image: African,
+      accent: "bg-surface-container-high"
+    },
+    {
+      title: "Traditional Sorghum Beers",
+      description: "The heart of local tradition, delivered with modern logistics efficiency. Distributors of Chibuku and Nyati brands.",
+      image: Super,
+      accent: "bg-secondary"
+    }
+  ];
+
   return (
-    <section className="bg-primary text-white py-16 md:py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="mb-16 text-center">
-          <span className="font-label text-secondary-container font-bold tracking-[0.2em] uppercase text-xs mb-4 block font-space">
-            Extensive Distribution Network
-          </span>
-          <h2 className="font-headline text-5xl md:text-6xl font-bold tracking-tight uppercase">Beverage Redistribution</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px] text-left">
-          {/* Delta Beverages */}
-          <div className="md:col-span-1 md:row-span-2 bg-primary-container relative group overflow-hidden aspect-[4/5] md:aspect-auto">
-            <img 
-              className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" 
-              src={Delta}
-              alt="A selection of Delta Beverages products"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 md:p-8">
-              <h4 className="font-headline text-xl md:text-2xl font-bold uppercase">Delta Portfolio</h4>
-              <p className="text-[10px] md:text-xs text-on-primary-container mt-2 font-body">Official distributors for Delta's iconic brands.</p>
+    <section className="bg-surface py-24 md:py-32 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 mb-16 md:mb-24">
+        <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary tracking-tight uppercase mb-4 text-center">Beverage Redistribution</h2>
+        <div className="h-1 w-20 bg-secondary mx-auto"></div>
+        <p className="text-on-surface-variant text-center mt-8 text-base md:text-lg max-w-2xl mx-auto font-body leading-relaxed">
+          Our nationwide logistics network ensures that Zimbabwe's most beloved brands reach every corner of the country in peak condition.
+        </p>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        {partners.map((partner, index) => (
+          <motion.div 
+            key={index} 
+            className="flex flex-col bg-surface-container-lowest border border-outline-variant hover:shadow-2xl transition-all duration-500 group overflow-hidden"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+          >
+            <div className="aspect-[16/10] overflow-hidden relative">
+              <img 
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" 
+                src={partner.image}
+                alt={partner.title}
+              />
+              <div className="absolute inset-0 bg-primary/20 opacity-40 group-hover:opacity-0 transition-opacity duration-700"></div>
             </div>
-          </div>
-          {/* African Distillers */}
-          <div className="md:col-span-2 md:row-span-1 bg-surface-container relative group overflow-hidden aspect-[16/7] md:aspect-auto">
-            <img 
-              className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all" 
-              src={African}
-              alt="African Distillers Limited products"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center p-4 md:p-6 bg-primary/20 backdrop-blur-md">
-                <h4 className="font-headline text-xl md:text-3xl font-bold uppercase tracking-widest">African Distillers</h4>
-                <p className="font-label text-[10px] md:text-sm tracking-widest mt-2 font-space">PREMIUM SPIRITS & WINES</p>
-              </div>
+            <div className="p-8 flex flex-col flex-grow">
+              <h4 className="font-headline font-bold text-xl mb-4 uppercase tracking-tight text-primary">{partner.title}</h4>
+              <p className="text-on-surface-variant text-sm leading-relaxed font-body flex-grow">{partner.description}</p>
+              <div className={`h-1 w-12 ${partner.accent} mt-6`}></div>
             </div>
+          </motion.div>
+        ))}
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 md:px-8 mt-24">
+        <div className="bg-primary-container p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 -mr-32 -mt-32 rounded-full blur-3xl"></div>
+          <div className="relative z-10 text-center md:text-left">
+            <h4 className="font-headline text-2xl md:text-3xl font-bold mb-4 uppercase tracking-tighter">Nationwide Cold-Chain Logistics</h4>
+            <p className="text-blue-100/60 max-w-xl font-body">Our state-of-the-art logistics network ensures product integrity and timely delivery for all partners across Zimbabwe.</p>
           </div>
-          {/* Sorghum Beers */}
-          <div className="md:col-span-1 md:row-span-1 bg-secondary relative group overflow-hidden aspect-square md:aspect-auto">
-            <img 
-              className="w-full h-full object-cover opacity-50 group-hover:opacity-90 transition-all" 
-              src={Super}
-              alt="Traditional sorghum beers"
-            />
-            <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6">
-              <h4 className="font-headline text-lg md:text-xl font-bold uppercase">Chibuku & Nyati</h4>
-              <p className="text-on-secondary/80 text-[10px] md:text-xs font-body">Local tradition, delivered.</p>
-            </div>
-          </div>
-          {/* And More */}
-          <div className="md:col-span-1 md:row-span-1 bg-tertiary-container relative flex items-center justify-center p-6 md:p-8 aspect-square md:aspect-auto">
-            <div className="text-center">
-              <span className="material-symbols-outlined text-3xl md:text-4xl text-secondary-container mb-3 md:mb-4">add_business</span>
-              <h4 className="font-headline font-bold text-sm md:text-lg leading-tight uppercase">And Many More</h4>
-              <p className="text-on-tertiary-container/80 text-[10px] md:text-xs mt-2 font-body">Global and local brands.</p>
-            </div>
-          </div>
-          {/* Logistics */}
-          <div className="md:col-span-2 md:row-span-1 bg-primary relative overflow-hidden flex flex-col md:flex-row items-center px-6 md:px-12 py-8 md:py-0 border border-white/10">
-            <div className="w-full md:w-1/2 text-center md:text-left mb-6 md:mb-0">
-              <h4 className="font-headline text-lg md:text-2xl font-bold mb-2 uppercase">Nationwide Logistics</h4>
-              <p className="text-[10px] md:text-xs text-slate-400 font-body">Cold-chain network ensuring integrity.</p>
-            </div>
-          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-            <a 
-              href="https://wa.me/263775632466"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full md:w-auto bg-secondary-container text-on-secondary-container px-4 py-2 font-bold text-[10px] md:text-xs uppercase tracking-widest font-space text-center"
-            >
-              Request Specs
-            </a>
-          </div>
-          </div>
+          <a 
+            href="https://wa.me/263775632466"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative z-10 bg-secondary-container text-on-secondary-container px-8 py-4 font-bold rounded-md hover:bg-white transition-colors uppercase tracking-widest text-xs md:text-sm font-space inline-flex items-center justify-center whitespace-nowrap"
+          >
+            Request Specs
+          </a>
         </div>
       </div>
     </section>

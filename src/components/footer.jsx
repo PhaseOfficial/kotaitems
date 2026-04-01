@@ -114,10 +114,12 @@ const Footer = () => {
               Website by Red Cup Series
             </a>
           </div>
-          <div className="flex items-center gap-4 md:gap-6 uppercase tracking-[0.2em] font-space text-[9px] md:text-[11px]">
-            <span>Industrial Excellence</span>
+          <div className="flex items-center gap-4 md:gap-6 uppercase tracking-[0.2em] font-space text-[9px] md:text-[11px] text-secondary-container font-bold">
+            <span>Innovation</span>
             <span className="opacity-20">•</span>
-            <span>Global Standards</span>
+            <span>Growth</span>
+            <span className="opacity-20">•</span>
+            <span>Value</span>
           </div>
         </div>
       </div>

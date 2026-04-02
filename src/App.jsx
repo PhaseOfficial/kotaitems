@@ -8,9 +8,6 @@ import ContactUs from "./pages/Contact";
 import TagManager from "react-gtm-module";
 import CookieConsent from "./components/Cookies";
 import React, { useEffect } from "react";
-import { trackVisit } from "./utils/trackVisit";
-import { setupAnalyticsListeners } from "./utils/analyticsListener";
-import { registerVisitor } from "./utils/registerVisitor";
 
 const tagManagerArgs = {
   gtmId: "GTM-PKXK7LPV",
@@ -23,9 +20,6 @@ const App = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    trackVisit();
-    registerVisitor();
-    setupAnalyticsListeners();
   }, [location.pathname]);
 
   return (
@@ -36,9 +30,6 @@ const App = () => {
         <Route path="/Services" element={<Services />} />
         <Route path="/Comingsoon" element={<ComingSoon />} />
         <Route path="/Contact" element={<ContactUs />} />
-        <Route path="/privacy" element={<ComingSoon />} />
-        <Route path="/terms" element={<ComingSoon />} />
-        <Route path="/specs" element={<ComingSoon />} />
         
         <Route
           path="*"
